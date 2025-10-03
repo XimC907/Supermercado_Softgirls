@@ -35,7 +35,7 @@
                 <td style="text-align: center">{{$ca->descripcion}}</td>
                 <td style="text-align: center"> 
                     <a class="btn btn-primary" href="{{route('form_edc_cat', $ca->id)}}">Editar</a>
-                    <a class="btn btn-danger">Eliminar</a>
+                    <a class="btn btn-danger" href="{{route('elimina_categoria', $ca->id)}}">Eliminar</a>
                 </td>
             </tr>
             @endforeach

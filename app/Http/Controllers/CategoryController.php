@@ -49,4 +49,10 @@ class CategoryController extends Controller
         //Retorna la ruta que tiene por nombre categorias
         return redirect()->route('categorias');
     }
+
+    public function eliminar($id){
+        $category = CategoriaModel::findOrFail($id);
+        $category->delete();
+        return redirect()->route('categorias');
+    }
 }
