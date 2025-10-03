@@ -3,7 +3,7 @@
 
  <div class="container">
     <h1>Actualización de Categorías</h1>
-    <form action="{{url('')}}" method="POST">
+    <form action="{{route('actualiza_categoria', $category->id)}}" method="POST">
         <!-- Para proteger los datos que viajen por el formulario (que estén en plantilla blade) -->
          <!-- FORMULARIO: campos botón de  acción SUBMIT (dentro de etiqueta form) -->
           <!-- form siempre tiene una accion "action"(hacia donde) y "method"(cómo lo hace) -->

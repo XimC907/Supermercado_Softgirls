@@ -39,4 +39,14 @@ class CategoryController extends Controller
         $category = CategoriaModel::findOrFail($id); //Retorna el registro cuyo id corresponda
         return view('Categorias.form_edicion', compact('category'));
     }
+
+    //No es recomendable editar las llaves primarias
+    public function actualizar(Request $r,$id){
+        $category = CategoriaModel::findOrFail($id);
+        $category->nombreCategoria = $r->input('nombre_categoria');
+        $category->descripcion = $r->input('descripcion_categoria');
+        $category->save();
+        //Retorna la ruta que tiene por nombre categorias
+        return redirect()->route('categorias');
+    }
 }
